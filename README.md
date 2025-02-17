@@ -62,3 +62,46 @@ It's possible to manage data or test from Postman or other similar tool, example
 ```
 
 
+# Bank Application 
+## Overview 
+This is a demo project for a Spring Boot application that manages banking operations such as handling credits, customers, and products. The application uses an H2 database for data storage and provides a web interface for interaction. 
+## Prerequisites 
+- Java 11 
+- Maven 
+## Setup 
+1. **Clone the repository:** 
+   ```bash 
+   git clone <repository-url> 
+   cd bank 
+   ``` 
+2. **Build the project:** 
+   Use Maven to build the project: 
+   ```bash 
+   ./mvnw clean install 
+   ``` 
+3. **Run the application:** 
+   Start the application using the Maven wrapper: 
+   ```bash 
+   ./mvnw spring-boot:run 
+   ``` 
+## Environment Configuration 
+Before starting the application, ensure that the following environment variable is set: 
+- `DB_PASSWORD`: The password for the database connection. 
+You can set this environment variable in your operating system's environment settings or in a `.env` file (if using a tool like `dotenv`). 
+Example for Unix-based systems: 
+```bash 
+export DB_PASSWORD=your_secure_password 
+``` 
+Example for Windows: 
+```cmd 
+set DB_PASSWORD=your_secure_password 
+``` 
+Ensure this variable is set before running the application to establish a successful database connection. 
+## Accessing the Application 
+- The application will be accessible at `http://localhost:8090`. 
+- The H2 console can be accessed at `http://localhost:8090/h2`. 
+## Additional Information 
+- The application uses Spring Boot DevTools for automatic restarts and live reloads during development. 
+- Swagger is integrated for API documentation and can be accessed at `http://localhost:8090/swagger-ui/`. 
+## License 
+This project is licensed under the MIT License. 
